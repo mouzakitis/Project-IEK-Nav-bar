@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Βιβλιοθήκη</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/welcome.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
+		<script src="scripts/jquery-3.2.0.min.js"></script>
+		<script src="scripts/jquery.textillate.js"></script>
+		<script src="scripts/jquery.lettering.js"></script>
+		<script src="scripts/jquery.fittext.js"></script>
+		<script src="scripts/polyfills.js"></script>
+		<script src="scripts/modernizr-2.6.2.min.js"></script>
+		<script src="scripts/myscript.js"></script>
+	</head>
+
+<body id="#">
+
+	<div class="bg-img">
+
+			<div class="overlay"></div>
+			<h1 class="welcome-text heading ">ΚΑΛΩΣΗΡΘΑΤΕ</h1>
+			<h2 class="sub-text hidden heading">ΣΤΗΝ ΒΙΒΛΙΟΘΗΚΗ ΜΟΥ</h2>
+			<button class="btn heading"> ΕΙΣΟΔΟΣ </button>
+
+	</div>
+
+	<div class="bg-img2">
+
+		<div class="left-side bar">
+
+			<button class="close btn-left">Close</button>
+
+				<div class="led_1 blue">
+					<a href="welcome.html"></a>
+				</div>
+
+				<div class="led_2 blue">
+					<a href=""></a>
+				</div>
+
+				<div class="led_3 blue">
+					<a href=""></a>
+				</div>
+
+				<div class="led_4 blue">
+					<a href=""></a>
+				</div>
+
+				<div class="led_5 blue">
+					<a href=""></a>
+				</div>
+
+		</div>
+
+		<div class="right-side bar">
+
+			<button class="close btn-right">Close</button>
+				<div class="led_6 blue">
+					<a href=""></a>
+				</div>
+
+				<div class="led_7 blue">
+					<a href=""></a>
+				</div>
+
+				<div class="led_8 blue">
+					<a href=""></a>
+				</div>
+
+				<div class="led_9 blue">
+					<a href=""></a>
+				</div>
+
+		</div>
+
+			<button class="box left"> Ελληνόγλωσσα </button>
+			<button class="box right"> Ξενόγλωσσα </button>
+
+			<button class="cn-button" id="cn-button">Menu</button>
+
+				<div class="cn-wrapper" id="cn-wrapper">
+
+					<ul>
+						<li><a href="#"><span>ΓΙΑ ΕΜΑΣ</span></a></li>
+						<li class="left"><a href="#"><span>ΕΛΛΗΝΙΚΑ</span></a></li>
+						<li><a href="welcome.html"><span>ΑΡΧΙΚΗ</span></a></li>
+						<li class="right"><a href="#"><span>ΞΕΝΑ</span></a></li>
+						<li><a href="#"><span>ΕΠΙΚΟΙΝΩΝΙΑ</span></a></li>
+					 </ul>
+
+				</div>
+		
+	</div>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('.welcome-text').textillate({
+				in: {effect:'flip', delay:200}			
+			});
+			setTimeout(function(){
+				$('.sub-text').show();
+				$('.sub-text').textillate();
+			},3000);
+
+			setTimeout(function(){
+				$('.btn').animate({'opacity':1}, 2000);	
+			},6000);
+		});
+
+			$( ".btn" ).click(function() {
+				$('.welcome-text').animate({ 'opacity': '0' }, 1000, function () {
+				 	$('.welcome-text').remove()
+				});
+
+				$('.sub-text').animate({'opacity': '0' }, 1000, function () { 
+					$('.sub-text').remove();
+				 });
+
+				$('.btn').animate({ 'opacity': '0' }, 500, function () {
+				 	$('.btn').remove();
+				 });
+				$('.overlay').animate({ 'opacity': '0' }, 1000, function () { $('.overlay').remove();
+				});
+				$('.bg-img').animate({ 'opacity': '0' }, 2000, function () 
+					{ $('.bg-img').remove(); 
+
+					$('.bg-img2').animate({ 'opacity': '1' }, 2000);
+
+				});
+					
+				setTimeout(function(){
+					$('.box').animate({ 'opacity': '1' }, 1000);
+    				$('.box').animate({'margin-top': '100px'}, 1000);
+    				$('.cn-button').animate({'margin-top': '-170px'}, 2000);	
+    			},3000);
+
+			});
+
+			$( ".left" ).click(function() {
+				$('.left-side').animate({ 'margin-left': '0' }, 2000);
+			});
+
+
+			$( ".right" ).click(function() {
+				$('.right-side').animate({ 'margin-right': '0' }, 2000); 
+			});
+
+			$('.btn-left').click(function() {
+				$('.left-side').animate({ 'margin-left': '-510px' }, 2000);
+			});
+
+			$('.btn-right').click(function() {
+				$('.right-side').animate({ 'margin-right': '-510px' }, 2000);
+			});
+
+	</script>
+
+	<script type="text/javascript">
+		(function(){
+
+	var button = document.getElementById('cn-button'),
+    wrapper = document.getElementById('cn-wrapper');
+
+    //open and close menu when the button is clicked
+	var open = false;
+	button.addEventListener('click', handler, false);
+
+	function handler(){
+	  if(!open){
+	    this.innerHTML = "Close";
+	    classie.add(wrapper, 'opened-nav');
+	  }
+	  else{
+	    this.innerHTML = "Menu";
+		classie.remove(wrapper, 'opened-nav');
+	  }
+	  open = !open;
+	}
+	function closeWrapper(){
+		classie.remove(wrapper, 'opened-nav');
+	}
+
+})();
+	</script>
+
+</body>
+
+</html>
