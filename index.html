@@ -27,6 +27,11 @@
 
 	<div class="bg-img2">
 
+		<img src="img/library_1.png">
+
+			<button class="box left"> Ελληνόγλωσσα </button>
+			<button class="box right"> Ξενόγλωσσα </button>
+			
 		<div class="left-side bar">
 
 			<button class="close btn-left">Close</button>
@@ -74,9 +79,6 @@
 
 		</div>
 
-			<button class="box left"> Ελληνόγλωσσα </button>
-			<button class="box right"> Ξενόγλωσσα </button>
-
 			<button class="cn-button" id="cn-button">Menu</button>
 
 				<div class="cn-wrapper" id="cn-wrapper">
@@ -84,7 +86,7 @@
 					<ul>
 						<li><a href="#"><span>ΓΙΑ ΕΜΑΣ</span></a></li>
 						<li class="left"><a href="#"><span>ΕΛΛΗΝΙΚΑ</span></a></li>
-						<li><a href="index.html"><span>ΑΡΧΙΚΗ</span></a></li>
+						<li><a href="welcome.html"><span>ΑΡΧΙΚΗ</span></a></li>
 						<li class="right"><a href="#"><span>ΞΕΝΑ</span></a></li>
 						<li><a href="#"><span>ΕΠΙΚΟΙΝΩΝΙΑ</span></a></li>
 					 </ul>
@@ -159,16 +161,16 @@
 	</script>
 
 	<script type="text/javascript">
-		$(document).ready(function(){
+		(function(){
 
 	var button = document.getElementById('cn-button'),
     wrapper = document.getElementById('cn-wrapper');
 
     //open and close menu when the button is clicked
 	var open = false;
-	button.addEventListener('click', swapper, false);
+	button.addEventListener('click', handler, false);
 
-	function swapper(){
+	function handler(){
 	  if(!open){
 	    this.innerHTML = "Close";
 	    classie.add(wrapper, 'opened-nav');
@@ -183,7 +185,7 @@
 		classie.remove(wrapper, 'opened-nav');
 	}
 
-});
+})();
 	</script>
 
 </body>
