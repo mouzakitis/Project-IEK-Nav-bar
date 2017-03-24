@@ -21,72 +21,9 @@ img{
 	max-width: 100%;
 	height:100%;
 }
-.bg-img {
-  width: 100%;
-  height: 100%;
-  background: url('../img/library_0.jpg') center center no-repeat;
-  background-size: cover;
-  overflow: hidden; 
-  position: fixed;
-  opacity: 1;
-  z-index: 10;
-   }
+/***********  WELCOME PAGE *****************/
 
- .bg-img2 {
-  width: 100%;
-  height: 100%;
-  background: url('../img/library_1.png') center center no-repeat;
-  background-size: cover;
-  overflow: hidden; 
-  position: fixed;
-  opacity: 0;
- }
 
-.bar{
-	width: 500px;
-	height: 600px;
-	overflow: hidden;
-	position: fixed;
-	top: 50%;
-	margin-top: -300px;
-
-}
-.left-side{
-	background: url('../img/library_1.jpeg') center center no-repeat;
-	left: 0;
-	margin-left:-510px;
-	box-shadow: 10px -10px 25px #000;
-}
-
-.right-side{
-	background: url('../img/library_2.jpeg') center center no-repeat;
-	right: 0;
-	margin-right: -510px;
-	box-shadow: -10px 10px 25px #000;
-}
-
-.close{
-	width: 70px;
-    height: 30px;
-    position: relative;
-    top: 0;
-    background: transparent;
-    border: 3px solid;
-    border-color: #cec2b7;
-    border-radius: 3px;
-    font-weight: 600;
-    font-size: 17px;
-    color: #d4d1cf;
-    cursor: pointer;
-}
-
-.btn-left{
-	left: 0;
-}
-
-.btn-right{
-	left: 430px;
-}
 
 .welcome-text {
 	position: absolute;
@@ -161,43 +98,79 @@ h1,h2{
    -1px  1px 0 #000,
     1px  1px 0 #000;
 }
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background: url('../img/library_0.jpg') center center no-repeat;
+  background-size: cover;
+  overflow: hidden; 
+  position: fixed;
+  opacity: 1;
+  z-index: 10;
+   }
 
-.box{
-	top: -80px;
-	left: 50%;
-	position: absolute;
+ .bg-img2 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden; 
+  position: fixed;
+  opacity: 0;
+ }
+
+
+/******      MPARES ARISTERA DE3IA       *******/
+
+
+.bar{
+	width: 500px;
+	height: 600px;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	margin-top: -300px;
+
+}
+.left-side{
+	background: url('../img/library_1.jpeg') center center no-repeat;
+	left: 0;
+	margin-left:-510px;
+	box-shadow: 10px -10px 25px #000;
+}
+
+.right-side{
+	background: url('../img/library_2.jpeg') center center no-repeat;
+	right: 0;
+	margin-right: -510px;
+	box-shadow: -10px 10px 25px #000;
+}
+
+.close{
+	width: 70px;
+    height: 30px;
+    position: relative;
+    top: 0;
     background: transparent;
     border: 3px solid;
-    border-color: #BF691E;
-    border-radius: 5px;
-    padding: 10px;
-    font-weight: 800;
-    font-size: 24px;
-    color: #BF691E;
+    border-color: #cec2b7;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 19px;
+    color: #d4d1cf;
     cursor: pointer;
-    opacity: 0;
-
 }
 
-.left{
-    margin-left: -18em;
+.btn-left{
+	left: 0;
 }
 
-.right{
-    margin-left: 9em;
+.btn-right{
+	left: 430px;
 }
 
 
-.box:hover{
-	transition: all 0.2s ease-in;
-	-webkit-text-stroke: 1px #632802;
-  	color: #BF691E;
-  	text-shadow:
-    1px 1px 0 #632802,
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    1px  1px 0 #000;
-}
+/********** MARKS GIA TA VIVLIA MESA STIS MPARES ARISTERA DE3IA*****/
+
 
 .blue {
 	position: relative;
@@ -246,6 +219,48 @@ h1,h2{
 	top: 209px;
     left: -55px;
 }
+
+
+/******************* BUTTONAKIA ARISTERA DE3IA ******/
+
+
+.box{
+	top: -80px;
+	left: 50%;
+	position: absolute;
+    background: transparent;
+    border: 3px solid;
+    border-color: #BF691E;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 800;
+    font-size: 24px;
+    color: #BF691E;
+    cursor: pointer;
+    opacity: 0;
+
+}
+
+.left{
+    margin-left: -18em;
+}
+
+.right{
+    margin-left: 9em;
+}
+
+
+.box:hover{
+	transition: all 0.2s ease-in;
+	-webkit-text-stroke: 1px #632802;
+  	color: #BF691E;
+  	text-shadow:
+    1px 1px 0 #632802,
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    1px  1px 0 #000;
+}
+
 
 /**********MENU*****************/
 
